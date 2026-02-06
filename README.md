@@ -51,7 +51,8 @@ code
 Bash
 python train.py --mode swmm --time_budget 5
 The script will create a new folder (e.g., training_run_surrogate or training_run_swmm) containing the saved agent weights, a CSV of the training history, and a plot of the learning curve.
-Citation
+
+## Citation
 If you use this code or research in your work, please cite the original paper:
 
 @article{Fletcher2026,
