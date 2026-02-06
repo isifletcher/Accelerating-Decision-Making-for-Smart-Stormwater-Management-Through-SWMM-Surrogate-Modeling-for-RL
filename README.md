@@ -19,3 +19,47 @@ The surrogate model enables a 33-fold acceleration in the training of an Advanta
 ├── train.py # Main script to run the comparative training experiment
 ├── requirements.txt # Required Python packages
 └── README.md # This documentation file
+
+## Installation
+
+1.  **Clone or download the repository.**
+
+2.  **Create a virtual environment (recommended):**
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
+
+3.  **Install the required packages:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Usage: Reproducing the Paper's Experiment
+
+The main script `train.py` is used to run the training experiments. You must specify which environment to use with the `--mode` argument.
+
+#### Train the Surrogate Agent (Agent S)
+
+To train the agent on the fast surrogate model for the 5-hour time budget described in the paper:
+```bash
+python train.py --mode surrogate --time_budget 5
+
+Train the SWMM Agent (Agent W)
+To train the agent on the high-fidelity SWMM simulator for the 5-hour time budget described in the paper:
+code
+Bash
+python train.py --mode swmm --time_budget 5
+The script will create a new folder (e.g., training_run_surrogate or training_run_swmm) containing the saved agent weights, a CSV of the training history, and a plot of the learning curve.
+Citation
+If you use this code or research in your work, please cite the original paper:
+
+@article{Fletcher2026,
+  title={Accelerating Decision-Making for Smart Stormwater Management Through SWMM Surrogate Modeling for Reinforcement Learning},
+  author={Fletcher, Isidora and Hathaway, Jon and Khojandi, Anahita},
+  year={2026},
+  month={January},
+  journal={ResearchGate Preprint},
+  doi={10.13140/RG.2.2.35368.43527},
+  note={Preprint}
+}
