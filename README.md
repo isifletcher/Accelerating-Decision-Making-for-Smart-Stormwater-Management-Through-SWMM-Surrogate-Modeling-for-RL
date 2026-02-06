@@ -9,3 +9,13 @@ This research addresses the computational bottleneck in applying Deep Reinforcem
 The surrogate model enables a 33-fold acceleration in the training of an Advantage Actor-Critic (A2C) agent, allowing it to converge to a competent multi-objective control policy for flood and erosion mitigation within a practical time budget.
 
 ## Repository Structure
+├── swmm_model/ # Contains the SWMM .inp file for the environment
+├── data/ # Contains the rainfall data used for training/testing
+├── saved_models/ # Contains the pre-trained surrogate model and data scaler
+├── src/ # Contains the core Python source code
+│ ├── a2c_agent.py # The A2C agent model and training functions
+│ ├── connor_creek_env.py # The custom Gymnasium environment for the watershed
+│ └── subprocess_env.py # Wrapper to run the environment in a separate process
+├── train.py # Main script to run the comparative training experiment
+├── requirements.txt # Required Python packages
+└── README.md # This documentation file
