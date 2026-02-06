@@ -44,17 +44,21 @@ The main script `train.py` is used to run the training experiments. You must spe
 To train the agent on the fast surrogate model for the 5-hour time budget described in the paper:
 ```bash
 python train.py --mode surrogate --time_budget 5
+```
 
-Train the SWMM Agent (Agent W)
+#### Train the SWMM Agent (Agent W)
 To train the agent on the high-fidelity SWMM simulator for the 5-hour time budget described in the paper:
-code
-Bash
+
+```bash
 python train.py --mode swmm --time_budget 5
+```
+
 The script will create a new folder (e.g., training_run_surrogate or training_run_swmm) containing the saved agent weights, a CSV of the training history, and a plot of the learning curve.
 
 ## Citation
 If you use this code or research in your work, please cite the original paper:
-code
+
+```
 Bibtex
 @article{Fletcher2026,
   title={Accelerating Decision-Making for Smart Stormwater Management Through SWMM Surrogate Modeling for Reinforcement Learning},
@@ -65,3 +69,4 @@ Bibtex
   doi={10.13140/RG.2.2.35368.43527},
   note={Preprint}
 }
+```
