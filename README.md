@@ -54,7 +54,8 @@ The script will create a new folder (e.g., training_run_surrogate or training_ru
 
 ## Citation
 If you use this code or research in your work, please cite the original paper:
-
+code
+Bibtex
 @article{Fletcher2026,
   title={Accelerating Decision-Making for Smart Stormwater Management Through SWMM Surrogate Modeling for Reinforcement Learning},
   author={Fletcher, Isidora and Hathaway, Jon and Khojandi, Anahita},
